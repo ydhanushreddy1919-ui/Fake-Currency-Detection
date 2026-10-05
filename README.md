@@ -1,73 +1,226 @@
-# React + TypeScript + Vite
+# 💵 Fake Currency Detection Using Deep Learning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Deep Learning-based **Fake Currency Detection System** that analyzes currency images and predicts whether the given note is **Genuine or Fake**.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 **Live Server:** https://vdw6sc-jfbx91tah-arcadawebapps8.vercel.app/
 
-## React Compiler
+> Try the live demo to test the currency detection system.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Counterfeit currency is a major problem that can affect individuals, businesses, and financial institutions. Manually identifying fake currency can be difficult, especially when dealing with large numbers of notes.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project uses **Deep Learning and Computer Vision** to analyze currency images and identify whether a currency note is likely to be **genuine or counterfeit**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The system provides an easy-to-use web interface where users can upload a currency image and receive a prediction.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🎯 Objectives
+
+* Detect potentially counterfeit currency notes.
+* Analyze visual features of currency images.
+* Use Deep Learning for automated classification.
+* Reduce the effort required for manual verification.
+* Provide a simple web-based detection system.
+* Demonstrate the practical use of AI in financial security.
+
+---
+
+## 🧠 Technologies Used
+
+* **Python**
+* **Deep Learning**
+* **Computer Vision**
+* **CNN**
+* **TensorFlow / Keras**
+* **OpenCV**
+* **HTML**
+* **CSS**
+* **JavaScript**
+* **Vercel**
+
+---
+
+## ⚙️ System Workflow
+
+```text
+Currency Image
+      ↓
+Image Upload
+      ↓
+Image Preprocessing
+      ↓
+Feature Extraction
+      ↓
+Deep Learning Model
+      ↓
+Currency Classification
+      ↓
+Genuine / Fake
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Key Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 💵 Currency Image Analysis
+
+Allows users to provide an image of a currency note for analysis.
+
+### 🧠 Deep Learning Classification
+
+Uses a trained Deep Learning model to classify the currency image.
+
+### 🔍 Automated Detection
+
+Provides an automated approach to identifying potentially counterfeit notes.
+
+### 🌐 Web-Based Application
+
+The system can be accessed directly through a web browser.
+
+### ⚡ Simple Interface
+
+Designed with a straightforward interface for easy testing and demonstration.
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                ┌─────────────────────┐
+                │   Currency Image    │
+                └──────────┬──────────┘
+                           ↓
+                ┌─────────────────────┐
+                │ Image Preprocessing │
+                └──────────┬──────────┘
+                           ↓
+                ┌─────────────────────┐
+                │ Feature Extraction  │
+                └──────────┬──────────┘
+                           ↓
+                ┌─────────────────────┐
+                │ Deep Learning Model │
+                │        (CNN)        │
+                └──────────┬──────────┘
+                           ↓
+                ┌─────────────────────┐
+                │    Classification   │
+                └──────────┬──────────┘
+                           ↓
+                    ┌──────┴──────┐
+                    ↓             ↓
+                Genuine         Fake
 ```
+
+---
+
+## 📂 Project Structure
+
+```text
+Fake-Currency-Detection/
+│
+├── dataset/
+│   ├── genuine/
+│   └── fake/
+│
+├── model/
+│   └── currency_model.h5
+│
+├── static/
+│   ├── css/
+│   └── js/
+│
+├── templates/
+│   └── index.html
+│
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 💻 How to Run Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/fake-currency-detection.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd fake-currency-detection
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+```bash
+python app.py
+```
+
+Then open the local server in your browser.
+
+---
+
+## 🌍 Live Application
+
+🚀 **Try the Fake Currency Detection System:**
+
+https://vdw6sc-jfbx91tah-arcadawebapps8.vercel.app/
+
+---
+
+## 📊 Applications
+
+This project can be useful for:
+
+* 🏦 Banking and financial institutions
+* 🛒 Retail businesses
+* 💰 Cash handling environments
+* 🏪 Shops and supermarkets
+* 🎓 Educational AI projects
+* 🔬 Computer Vision research
+
+---
+
+## 🔮 Future Enhancements
+
+* Support for multiple currency denominations.
+* Detection of different currencies.
+* Real-time camera-based detection.
+* Improved accuracy using transfer learning.
+* Mobile application integration.
+* Currency security-feature verification.
+* Integration with POS and banking systems.
+* Larger and more diverse datasets.
+
+---
+
+## 👨‍💻 Author
+
+**Dhanush Reddy**
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
+### ⚠️ Disclaimer
+
+This project is intended for **educational and research purposes**. Predictions should not be treated as definitive proof that a banknote is counterfeit. Official currency-authentication procedures should be used for real-world verification.
